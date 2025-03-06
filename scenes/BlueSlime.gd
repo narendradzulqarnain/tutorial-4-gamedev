@@ -6,14 +6,16 @@ extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D
 
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	if is_on_wall():
-		speed *= -1 
+		speed *= -1
 	sprite.play("default")
-	velocity.x = speed  
+	velocity.x = speed
 	move_and_slide()
+
 
 func _process(_delta):
 	if velocity.x != 0:
