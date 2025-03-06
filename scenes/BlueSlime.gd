@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed: float = 150.0
 @export var gravity: float = 500.0
-@export var sceneName: String = "LoseScene"
+@export var scene_name: String = "LoseScene"
 
 @onready var sprite = $AnimatedSprite2D
 
@@ -27,4 +27,4 @@ func _process(_delta):
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		get_tree().change_scene_to_file("res://scenes/" + sceneName + ".tscn")
+		get_tree().change_scene_to_file("res://scenes/" + scene_name + ".tscn")

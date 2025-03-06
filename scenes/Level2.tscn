@@ -57,7 +57,6 @@ sources/0 = SubResource("TileSetAtlasSource_wnt0b")
 
 [node name="BlueSlime" parent="." instance=ExtResource("5_43db0")]
 position = Vector2(2816, -171)
-sceneName = "LoseScreen2"
 
 [node name="Player" parent="." instance=ExtResource("1_m1te7")]
 position = Vector2(213, 165)
@@ -71,11 +70,9 @@ tile_set = SubResource("TileSet_iojq3")
 [node name="AreaTrigger" parent="." instance=ExtResource("3_1idux")]
 position = Vector2(1994, 724)
 scale = Vector2(350, 2.142)
-sceneName = "Level2"
 
 [node name="Objective" parent="." instance=ExtResource("5_6i13v")]
 position = Vector2(4031, -429)
-sceneName = "WinScreen2"
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(823, -1237)
