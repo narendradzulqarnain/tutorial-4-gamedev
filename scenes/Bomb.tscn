@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4cpeat4752g7"]
+
+[ext_resource type="Script" path="res://Bomb.gd" id="1_8moxy"]
+[ext_resource type="Texture2D" uid="uid://bj7p6binvtp2i" path="res://assets/kenney_platformerpack/PNG/Tiles/bomb.png" id="2_ucuif"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nb0x5"]
+radius = 55.2268
+
+[node name="Bomb" type="RigidBody2D"]
+script = ExtResource("1_8moxy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_nb0x5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ucuif")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

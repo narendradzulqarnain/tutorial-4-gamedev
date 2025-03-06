@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgmhjcbm8hd2i"]
+
+[ext_resource type="Texture2D" uid="uid://d0xi3jghkp5hk" path="res://assets/Keanu.png" id="1_0yd55"]
+[ext_resource type="Script" path="res://scenes/WinScreen2.gd" id="2_bfy4r"]
+
+[node name="WinScreen" type="Sprite2D"]
+position = Vector2(584, 316)
+texture = ExtResource("1_0yd55")
+script = ExtResource("2_bfy4r")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -81.0
+offset_top = 23.0
+offset_right = 91.0
+offset_bottom = 46.0
+text = "Press Space to Start Over"

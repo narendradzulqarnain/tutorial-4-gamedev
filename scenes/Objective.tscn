@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://blfieipk8cgxw"]
+
+[ext_resource type="Texture2D" uid="uid://b7rncqp0d3w6n" path="res://assets/kenney_platformerpack/PNG/Items/flagBlue1.png" id="1_0mfgi"]
+[ext_resource type="Script" path="res://scenes/Objective.gd" id="1_5qa4t"]
+[ext_resource type="Texture2D" uid="uid://b5dw8jdrd8wei" path="res://assets/kenney_platformerpack/PNG/Items/flagBlue2.png" id="2_l0w06"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tlmek"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0mfgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l0w06")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5airu"]
+size = Vector2(116, 127)
+
+[node name="Objective" type="Area2D"]
+script = ExtResource("1_5qa4t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tlmek")
+frame_progress = 0.394245
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 0.5)
+shape = SubResource("RectangleShape2D_5airu")

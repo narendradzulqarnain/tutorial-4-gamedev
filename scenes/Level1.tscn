@@ -73,7 +73,7 @@ texture = ExtResource("3_c2tl8")
 [node name="AreaTrigger" parent="Sprite2D" instance=ExtResource("4_f1wod")]
 position = Vector2(-4.47584, 8.95168)
 scale = Vector2(-14.8694, 23.9401)
-sceneName = "WinScreen"
+sceneName = "Level2"
 
 [node name="Lose Area" type="Node2D" parent="."]
 position = Vector2(534, 469)

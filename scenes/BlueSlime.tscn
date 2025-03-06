@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://x5rh4t6ivg4e"]
+
+[ext_resource type="Script" path="res://scenes/BlueSlime.gd" id="1_6lluq"]
+[ext_resource type="Texture2D" uid="uid://hqxefh2di5hm" path="res://assets/kenney_platformerpack/PNG/Enemies/slimeBlue_hit.png" id="1_6xfon"]
+[ext_resource type="Texture2D" uid="uid://c5sbiq7c88c08" path="res://assets/kenney_platformerpack/PNG/Enemies/slimeBlue_move.png" id="2_3iaqt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lr46v"]
+size = Vector2(93, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqoin"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6xfon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3iaqt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qbwd"]
+size = Vector2(98, 52)
+
+[node name="BlueSlime" type="CharacterBody2D"]
+script = ExtResource("1_6lluq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 37)
+shape = SubResource("RectangleShape2D_lr46v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cqoin")
+frame = 1
+frame_progress = 0.685423
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 37)
+shape = SubResource("RectangleShape2D_8qbwd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
