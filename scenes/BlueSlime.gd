@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed: float = 150.0
 @export var gravity: float = 500.0
-@export var scene_name: String = "LoseScene"
+@export var scene_name: String = "LoseScreen2"
 
 @onready var sprite = $AnimatedSprite2D
 

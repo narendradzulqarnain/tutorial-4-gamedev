@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var scene_name: String = "WinScreen"
+@export var scene_name: String = "WinScreen2"
 
 
 func _on_body_entered(body: Node2D) -> void:
